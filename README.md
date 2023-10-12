@@ -119,3 +119,54 @@ sns.distplot(df["Salary"])
 sns.histplot(x="Salary", data=df)
 ```
 ![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/d74db76f-bd03-479b-aa11-683d0ba01098)
+# superstore.csv
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+df=pd.read_csv("/content/SuperStore.csv exp3.csv")
+df
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/d0c3cd3f-ee22-4c15-91bc-833161442355)
+```
+df.head()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/c9be8b9b-0e23-42a9-ae89-ab1a04e933f7)
+```
+df.info()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/6d08a445-9437-4afa-8f93-2c6031c57549)
+```
+df.describe()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/f3d1be37-2499-4035-9f07-45e05beb9cec)
+```
+df.isnull().sum()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/34ddbd02-5b32-4eab-9d7d-b405076bd61e)
+```
+df.dtypes
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/df731fdd-4cef-40ee-8f2d-7a165aa335d6)
+
+```
+df['Postal Code'].value_counts()
+```
+```
+sns.boxplot(x="Postal Code", data=df)
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/3121a1a8-e614-450d-aaf1-05262157393e)
+```
+sns.countplot(x="Postal Code", data=df)
+```
+```
+sns.distplot(df["Postal Code"])
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/8bfa3dc1-20d1-48fa-b386-4b8106b2f94a)
+```
+sns.histplot(x="Postal Code", data=df)
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/4d6c4e17-7b96-4923-ade2-93c01c750407)
+
+# Result:
+Thus we have read the given data and performed the univariate analysis with different types of plots.
