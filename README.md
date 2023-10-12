@@ -1,12 +1,12 @@
 # ODD2023-DataScience-Ex-03
-# Aim:
+# AIM:
 To read the given data and perform the univariate analysis with different types of plots.
 
-# Explanation:
+# EXPLANATION:
 
 ### Univariate analysis is basically the simplest form to analyze data. Uni means one and this means that the data has only one kind of variable. The major reason for univariate analysis is to use the data to describe. The analysis will take data, summarise it, and then find some pattern in the data.
 
-# Algorithm:
+# ALGORITHM:
 ### Step1: Read the given data.
 ### Step2: Get the information about the data.
 ### Step3: Remove the null values from the data.
@@ -14,7 +14,7 @@ To read the given data and perform the univariate analysis with different types 
 ### Step5: Count the values from the data.
 ### Step6: Do plots like boxplots,countplot,distribution plot,histogram plot.
 
-# Program:
+# PROGRAM:
 ```
 Developed By: SRINIDHI SENTHIL
 Register Number: 212222230148
@@ -69,4 +69,53 @@ sns.histplot(x="BMI", data=df)
 ```
 ![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/932a5cc7-a7c9-425c-b653-49902e1134b3)
 
-# SuperStore
+# emplyeesal.csv
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+df=pd.read_csv("/content/employeesal.csv exp3.csv")
+df
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/68ab6f77-626e-478f-8c58-4ea8b4e58e0d)
+```
+df.head()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/043254e3-4416-4a2f-872d-51f25f51f6f9)
+```
+df.info()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/740dc89a-4ed0-4628-8a54-b4a56a54c218)
+```
+df.describe()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/f9ed7cdf-3b06-42f6-8452-62518ede0545)
+```
+df.isnull().sum()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/b668364c-af69-4844-897e-58a557a96895)
+```
+df.dtypes
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/5eed451f-1ab7-4c49-9d4f-07242bcc898b)
+```
+df['Salary'].value_counts()
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/4f4852e5-13dd-458f-830d-79f77fc9f25f)
+```
+sns.boxplot(x="Salary", data=df)
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/4e6a06f4-0de2-4bd2-8d73-82baac08f99e)
+```
+sns.countplot(x="Salary", data=df)
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/658675f4-920d-4e09-9fb8-4dbacf8178cf)
+```
+sns.distplot(df["Salary"])
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/4e6a7a32-d83f-4ff7-86eb-cc95966cb9d9)
+```
+sns.histplot(x="Salary", data=df)
+```
+![image](https://github.com/SRINIDHISENTHILNATHAN/ODD2023-DataScience-Ex-03/assets/121373170/d74db76f-bd03-479b-aa11-683d0ba01098)
